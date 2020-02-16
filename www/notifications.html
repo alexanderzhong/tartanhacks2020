@@ -17,23 +17,278 @@
     <link rel="stylesheet" type="text/css" href="css/notifications.css">
     <!--<link rel="stylesheet" href="css/friendlist.css">-->
     <!--<h1 style = "font-size:70px; padding-left:80px;">Friends <input type ="image" src="img/addfrend.png", height=75, width=75 onclick="myFunction()" padding-left=800px> </h1>-->
+  <style>
+  body {font-family:Arial, Helvetica, sans-serif;}
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 5px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: scroll; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  .modal-content{
+    background-color:#ffffff;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    overflow: scroll;
+    overflow-wrap:break-word;
+  }
+  .close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+</style>
+
   </head>
-  <body>
+  <body style = "background-color:grey">
+
+
+
     <div id="header">
-      <h1>News <input type ="image" style = "vertical-align: middle;" src="img/redplus.jpg" onclick="addNews()", height=50vh, width=50vh></h1>
+      <h1>News <!--<input type ="image" style = "vertical-align: middle;" src="img/redplus.jpg" onclick="addNews()", height=50vh, width=50vh>--></h1>
     </div>
 
   <div id = "newsTable">
     <table id = "news" class = buttons>
-     <tr><td><button type="button" onclick="showNews1()">news1</button>
-        <tr><td><button type="button" onclick="showNews2()">news2</button>
-        <tr><td><button type="button" onclick="showNews3()">news3</button>
-        <tr><td><button type="button" onclick="showNews4();">news4</button>
+     <tr><td><button id = "news1">CRIME ALERT! This crime alert is to inform the CMU community about an incident that may have involved a sexual assault...
+</button>
+        <tr><td><button id = "news2">SAFETY ALERT! This safety alert is to inform the university community about two incidents that occurred on campus this week... </button>
+        <tr><td><button id = "news3">SAFETY ALERT! This Safety Alert is to inform the university community about an incident that occurred near the intersection of Ellsworth Avenue and Aiken Avenue on December 14, 2019 at approximately 9:55 a.m...</button>
+        <tr><td><button id = "news4">SAFETY ALERT! This safety alert is to inform the CMU community about an off-campus groping incident that occurred last night at the intersection of South Negley and Ellsworth avenues...</button>
+        <tr><td><button id = "news5">CRIME ALERT! Carnegie Mellon University Police has learned that several male students have recently been lured into online schemes demanding payment to prevent the release of sensitive videos/photographs...</button>
+
         
   </table>
 </div>
+<div id = "modal1" class = "modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <pre>
+    This crime alert is to inform the CMU community about an incident that may have involved a sexual assault. It is believed the incident occurred between 3 and 3:40 
+    a.m. on Saturday, February 8 at Mudge House, 1000 Morewood Avenue.
 
+    CMU Police are investigating the incident to gain more information about what transpired. Anyone with information regarding this matter is asked to call the CMUPD at
+    412-268-2323. Due to the active investigation we are not able to share more information at this time.
+
+    The university has increased CMU Police presence in the area.
+
+    For students seeking confidential support, CMU’s Counseling and Psychological Services is available at any time of day or night. Students can call CaPS at 412-268-2922 
+    or visit http://www.cmu.edu/counseling.
+
+    Students also can seek assistance from CMU’s Office of Title IX Initiatives. The office provides information and support; explains options for investigation and resolution; 
+    negotiates and implements safety measures; and provides educational, training and prevention programs. Students can call the office at 412-268-7125, send email to 
+    tix@cmu.edu or visit the office online at http://www.cmu.edu/title-ix.
+
+    Free and confidential counseling and other resources for survivors of sexual violence also are available at the Pittsburgh Action Against Rape. PAAR can be reached at
+    1-866-363-7273 and http://paar.net.
+
+    Sincerely,
+
+    Tom Ogden
+    Chief of University Police
+</pre>
+</div>
+</div>
+
+<div id = "modal2" class = "modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <pre>
+    
+This safety alert is to inform the university community about two incidents that occurred on campus this week.
+
+At 3:42 a.m., Wednesday, January 29, a suspect followed a student into a Baker Hall computer lab through the Frew St. entrance. Known as “piggybacking,” the suspect
+entered the lab by closely following the student and gaining entry before the door had time to close. The suspect then illegally accessed a computer that a previous user
+was still logged into. A CMU police officer on foot patrol observed this and arrested the man.
+
+At 1:24 p.m., Thursday, January 30, a suspect entered the third floor of The College of Fine Arts after leaving threatening phone messages with a family member who works
+there, stating that he was coming to campus. The suspect came to campus and entered through a locked door that was propped open and began damaging property in an
+office. CMU police arrested him.
+
+Both of these incidents involve practices that threaten the safety of our community members and I would like to remind you to:
+
+Log off any computer you use when finished;
+Do not allow others you don’t know to “piggyback” through secure doors; and
+Do not prop open doors that are to be locked for security purposes.
+Respectfully,
+
+Chief Tom Ogden
+University Police
+
+
+</pre>
+</div>
+</div>
+
+<div id = "modal3" class = "modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <pre>
+    
+This Safety Alert is to inform the university community about an incident that occurred near the intersection of Ellsworth Avenue and Aiken Avenue on
+December 14, 2019 at approximately 9:55 a.m. A CMU student reported that a beige, older model truck with a matte finish and peeling paint pulled over next to her.
+The male driver then yelled, “Hey woman, get in the car!” The CMU student refused, and the driver of the truck sighed loudly, “Ugh,” then sped away traveling
+westbound on Ellsworth Avenue.
+
+The driver is described as male, approximately 60 years old, partially bald with gray hair. The Pittsburgh Bureau of Police is investigating the incident.
+
+General Prevention and Safety Tips:
+
+Stay alert to your surroundings at all times.
+Stay close to friends and do not interact with strangers.
+Do not approach suspicious persons or vehicles.
+Report any suspicious incidents, persons or vehicles immediately to CMU Police at 412-268-2323, or off campus to the Pittsburgh Police at 911.
+Lt. Robert Opferman
+University Police
+</pre>
+</div>
+</div>
+
+<div id = "modal4" class = "modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <pre>
+    
+This safety alert is to inform the CMU community about an off-campus groping incident that occurred last night at the intersection of South Negley and Ellsworth avenues.
+
+At approximately 11:25 p.m. Saturday, November 9, a CMU student was grabbed in the buttocks area as she was walking along South Negley Ave. The suspect is
+unknown to her and is described as a male in his 20s, around 6 feet tall with a thin build and crew cut, wearing a blue sweater and jeans. He grabbed her once 
+and walked away. She was not injured.
+
+The Pittsburgh Bureau of Police is investigating this incident with assistance from the CMUPD.
+
+Tom Ogden
+Chief of University Police
+</pre>
+</div>
+</div>
+
+<div id = "modal5" class = "modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <pre>
+    
+Carnegie Mellon University Police has learned that several male students have recently been lured into online schemes demanding payment to prevent the release 
+of sensitive videos/photographs.
+
+The reported incidents follow the same pattern. Male students are initially contacted via social media, such as Facebook, by a suspect purporting to be a female 
+romantically interested in them. In some cases, the victims are sent explicit photos by the suspect. After a brief conversation, the victims are then asked to continue 
+the conversations via Skype or Facebook Messenger. The victims then are encouraged to remove their clothes and/or perform sexual acts in view of the camera. 
+Afterward, an unknown person contacts the victim, claiming to have recorded the event, and demanding money to prevent the release of the recording. Some of the 
+victims were told the video would be posted on social media and/or sent to friends and family if payment was not made. These incidents are similar in nature to a series of 
+scams perpetuated at a number of universities, including CMU in 2016.
+
+We are urging you to be careful about your online activities and to be skeptical of requests to perform acts on camera. Remember, once photos or videos 
+are made available to others via the internet, it may be difficult to prevent disclosure and dissemination of the content.
+
+Anyone experiencing this type of incident, or with information related to them, is asked to contact CMU Police at 
+412-268-2323 and/or the Office of Title IX Initiatives at 412-268-7125. Reports will be handled discreetly.
+
+Sincerely,
+
+Tom Ogden
+Chief of University Police
+</pre>
+</div>
+</div>
+<script>
+
+    var modal1 = document.getElementById("modal1");
+    var btn1 = document.getElementById("news1");
+    btn1.onclick=function(){
+      modal1.style.display="block";
+      var span = document.getElementsByClassName("close")[0];
+      span.onclick=function(){
+      modal1.style.display="none";
+      }
+      window.onclick=function(event){
+      if(event.target==modal1){
+        modal1.style.display="none";
+      }
+    }
+    }
+    
+    
+    
+    
+
+    var modal2 = document.getElementById("modal2");
+    var btn2 = document.getElementById("news2");
+    btn2.onclick=function(){
+      modal2.style.display="block";
+      var span2=document.getElementsByClassName("close")[0];
+      span2.onclick=function(){
+        modal2.style.display="none";
+      }
+      window.onclick=function(event){
+        if(event.target==modal2){
+          modal2.style.display="none";
+        }
+      }
+      
+    }
+   
+
+    var modal3 = document.getElementById("modal3");
+    var btn3 = document.getElementById("news3");
+    
+    btn3.onclick=function(){
+      modal3.style.display="block";
+      window.onclick=function(event){
+      if(event.target==modal3){
+        modal3.style.display="none";
+      }
+    }
+    }
+    
+
+    var modal4 = document.getElementById("modal4");
+    var btn4 = document.getElementById("news4");
+    btn4.onclick=function(){
+      modal4.style.display="block";
+      window.onclick=function(event){
+      if(event.target==modal4){
+        modal4.style.display="none";
+      }
+    }
+    }
+    
+
+    var modal5 = document.getElementById("modal5");
+    var btn5 = document.getElementById("news5");
+    btn5.onclick=function(){
+      modal5.style.display="block";
+      window.onclick=function(event){
+      if(event.target==modal5){
+        modal5.style.display="none";
+      }
+    }
+    }
+    
+    
+
+    
+  
+</script>
 <br>
+
   </body>
   <script>
   function addNews(){
@@ -46,16 +301,19 @@
     
     }
   }
+  
+  
 </script>
   <footer data-position="fixed" data-id="home_1" data-tap-toggle="false">
     <div data-role="navbar" class="navbar">
          <ul>
           <!-- <a href="" class="ui-icon-user ui-btn-icon-notext inlineIcon" data-transition="none"><span class="ui-icon-edit ui-btn-icon-notext inlineIcon"></span>Me</a> -->
            <!-- <a href="" data-transition="none"><span class="ui-icon-user ui-btn-icon-notext inlineIcon"></span>Friends</a> -->
-           <li onclick=location.href="me.html"><img src="./img/baseline_person_black_48dp.png" style="height: 36px; width: 36px;"></li>
-           <li onclick=location.href="friends.html"><img src="./img/baseline_people_alt_black_48dp.png" style="height: 36px; width: 36px;"></li>
-           <li><img src="./img/baseline_notifications_active_black_48dpred.png" style="height: 36px; width: 36px;"></li>
-           <li onclick=location.href="settings.html"><img src="./img/baseline_settings_black_48dp.png" style="height: 36px; width: 36px;"></li>
+           <li onclick=location.href="me.html">
+            <img src="./img/baseline_person_black_18dp.png" style="height: 36px; width: 36px;"></li>
+           <li onclick=location.href="friends.html"><img src="./img/baseline_people_alt_black_18dp.png" style="height: 36px; width: 36px;"></li>
+           <li><img src="./img/notifications2.png" style="height: 36px; width: 36px;"></li>
+           <li onclick=location.href="settings.html"><img src="./img/baseline_settings_black_18dp.png" style="height: 36px; width: 36px;"></li>
          </ul>
        </div>
   </footer>

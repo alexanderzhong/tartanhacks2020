@@ -1,13 +1,13 @@
 @font-face {
   font-family: 'Open Sans';
-  src: url('../fonts/OpenSans-Regular.ttf') format('truetype');
+  src: url('../fonts/Roboto-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Open Sans';
-  src: url('../fonts/OpenSans-Bold.ttf') format('truetype');
+  src: url('../fonts/Roboto-Medium.ttf') format('truetype');
   font-weight: bold;
   font-style: normal;
 }
@@ -80,7 +80,6 @@ h1 {
 }
 
 
-
 button {
   background-color: #9f9f9f;
   border: none;
@@ -116,8 +115,23 @@ button:hover {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+  background-color: rgba(0,0,0,0.8); /* Black background with opacity */
   z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
   cursor: pointer; /* Add a pointer on hover */
+}
+
+#text{
+  position: fixed;
+  background-color: black;
+  top: 10%;
+  left: 10%;
+  font-size: 3vh;
+  margin-right: 10%;
+  text-align: justify;
+  color: white;
+  padding: 1vh;
+  border-style: double
+  /* transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%); */
 }
 

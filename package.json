@@ -28,7 +28,11 @@
       "cordova-plugin-globalization": {},
       "cordova-plugin-androidx": {},
       "cordova-plugin-androidx-adapter": {},
-      "cordova-plugin-media": {}
+      "cordova-plugin-media": {},
+      "cordova-plugin-googlemaps": {
+        "PLAY_SERVICES_VERSION": "15.0.1",
+        "ANDROID_SUPPORT_V4_VERSION": "27.+"
+      }
     }
   },
   "dependencies": {
@@ -36,6 +40,7 @@
     "cordova-browser": "^5.0.4",
     "cordova-ios": "^5.0.1",
     "cordova-plugin-file": "^6.0.2",
+    "cordova-plugin-googlemaps": "^2.6.2",
     "cordova-plugin-media": "^5.0.3"
   },
   "devDependencies": {

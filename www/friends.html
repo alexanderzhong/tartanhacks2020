@@ -13,14 +13,16 @@
     <script src="js/index.js"></script>
     <script src="js/constants.js"></script>
     <script src="js/localstorage.js"></script>
+    <script src="js/friends.js"></script>
     <link rel="stylesheet" type="text/css" href="js/jquery-1.5.0.mobile.min.css">
     <link rel="stylesheet" type="text/css" href="css/friends.css">
     <!--<link rel="stylesheet" href="css/friendlist.css">-->
     <!--<h1 style = "font-size:70px; padding-left:80px;">Friends <input type ="image" src="img/addfrend.png", height=75, width=75 onclick="myFunction()" padding-left=800px> </h1>-->
   </head>
   <body>
-    <div id="header">
-      <h1>Friends <input type ="image" style = "vertical-align: middle;" style="float:right;" src="img/redplus.jpg" onclick="addFriend()", height=50vh, width=50vh></h1>
+
+    <div onclick="mapToggle()" id="header">
+      <h1 onclick="mapToggle()">Friends <input type ="image" style = "vertical-align: middle;" style="float:right;" src="img/redplus.jpg" onclick="addFriend()", height=50vh, width=50vh></h1>
 
       
     </div>
@@ -33,7 +35,7 @@
       <th></th> 
       <th></th>
     </tr> -->
-    <tr>
+<!--     <tr>
       <td>Hugh Janus</td>
       <td><input type ="image" src="img/newlocation.png", height=50vh, width=50vh></td>
       <td><img src="img/yellowcircle.png", height=50vh, width=50vh></td>
@@ -47,29 +49,17 @@
       <td>Alex Zhong</td>
       <td><input type ="image" src="img/newlocation.png", height=50vh, width=50vh></td>
       <td><img src="img/redcircle.png", height=50vh, width=50vh></td>
-    </tr>
+    </tr> -->
   
   </table>
 </div>
 <br>
+    <div id="mapContainer">
+      <div id="map" onclick="off()">
+      </div>
+    </div>
   </body>
-  <script>
-function addFriend(){
-  var table = document.getElementById("friends");
-  var person = prompt("Enter Code:");
-  if (person != null){
-    var row = table.insertRow(0);
-    var cell1 = row.insertCell(0);
-    var cell2 = row.insertCell(1);
-    var cell3 = row.insertCell(2);
-    cell1.innerHTML = person
-    cell2.innerHTML = "<input type ='image' src='img/newlocation.png', height='50vh', width='50vh'>"
-    cell3.innerHTML = "<img src = 'img/greycircle.png' height='50vh' width='50vh'>"
-  }
   
-
-}
-</script>
   <footer data-position="fixed" data-id="home_1" data-tap-toggle="false">
     <div data-role="navbar" class="navbar">
          <ul>

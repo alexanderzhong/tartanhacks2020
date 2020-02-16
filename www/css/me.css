@@ -29,6 +29,7 @@ html {
 html, body {margin: 0; height: 100%; overflow: hidden; background: #e8e8e8;}
 
 .navbar {
+  border-top: 2px solid #d1d1d1;
   background-color: white;
   overflow: hidden;
   position: fixed;

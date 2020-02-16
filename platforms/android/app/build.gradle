@@ -98,6 +98,8 @@ ext {
 }
 
 // PLUGIN GRADLE EXTENSIONS START
+apply from: "../cordova-plugin-googlemaps/security-tbxml-android.gradle"
+apply from: "../cordova-plugin-googlemaps/security-apikey.gradle"
 // PLUGIN GRADLE EXTENSIONS END
 
 def hasBuildExtras1 = file('build-extras.gradle').exists()
@@ -296,6 +298,9 @@ dependencies {
     implementation "com.google.android.gms:play-services-location:16.+"
     implementation "androidx.legacy:legacy-support-v4:1.0.0"
     implementation "androidx.appcompat:appcompat:1.0.0"
+    implementation "com.google.android.gms:play-services-maps:15.0.1"
+    implementation "com.google.android.gms:play-services-location:15.0.1"
+    implementation "androidx.legacy:legacy-support-core-utils:1.0.0"
     // SUB-PROJECT DEPENDENCIES END
 }
 
